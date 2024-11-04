@@ -341,3 +341,23 @@ footer {
     border-radius: 8px;
     overflow: hidden;
 }
+
+.about-image {
+    display: block; /* Makes the image a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Maintains aspect ratio */
+}
+
+main {
+    text-align: center; /* Centers text and inline elements like images */
+    margin: 20px; /* Optional: adds some space around the main section */
+}
+main p, main ul {
+    text-align: left; /* Keeps paragraph text left-aligned */
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main h3{
+    margin-top: 40px;
+}
