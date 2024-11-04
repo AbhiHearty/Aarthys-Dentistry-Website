@@ -1,0 +1,343 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat Thin for the title */
+    font-weight: 200; /* Use Montserrat Thin */
+    text-align: center; /* Center the heading */
+    color: #333; /* Example color for the text */
+}
+
+header {
+    background-color: #ffffff   ; /* white */
+    color: black;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+
+header .container {
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.hero {
+    position: relative; /* Make the section relative */
+    height: 70vh; /* Full screen height */
+    overflow: hidden; /* Hide overflow */
+    display: flex; /* Use flexbox for centering content */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    background-image: url('images/nilan.webp'); /* Use your background image */
+    background-size: cover; /* Ensure the background covers the entire section */
+    background-position: center; /* Center the image */
+}
+
+.overlay {
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ensure it covers the full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+    z-index: 1; /* Send the overlay above the background but below the content */
+}
+
+.content {
+    position: relative; /* Position it relative to the hero section */
+    color: white; /* Text color */
+    z-index: 2; /* Ensure the content is above the overlay */
+    padding-bottom: 200px; /* Optional: add padding for content readability */
+}
+
+.hero h2 {
+    font-size: 2em;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+}
+
+.hero p{
+    font-size: 1em;
+    padding-bottom: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+nav ul {
+    justify-content: center;
+    display: flex;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+nav ul li {
+    position: relative; /* Positioning for the dropdown */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 15px; /* Add padding */
+    display: block; /* Make links block-level */
+}
+
+.dropdown {
+    display: none; /* Hide the dropdown by default */
+    position: absolute; /* Position it absolutely */
+    top: 100%; /* Position it below the parent */
+    left: 0; /* Align it to the left */
+    background-color: white; /* Background for dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    z-index: 1000; /* Ensure it is on top */
+}
+
+nav ul li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown li a {
+    padding: 10px 15px; /* Padding for dropdown links */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.dropdown li a:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}
+
+.cta-button {
+    background-color: #FFD700; /* Gold */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 10px 0;
+}
+
+.tab {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 150px; /* Fixed width for uniformity */
+}
+
+.tab img {
+    width: 50px; /* Icon size */
+    height: 50px; /* Icon size */
+}
+
+.tab h3 {
+    margin: 10px 0;
+}
+
+.tab p {
+    font-size: 0.9em;
+}
+
+.tab:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.tab.active {
+    background-color: #A0D7E7; /* Highlight active tab */
+    color: white;
+}
+
+.tab-content {
+    display: flex;
+    justify-content: center;
+}
+
+.tab-item {
+    display: none;
+    margin-top: 20px;
+}
+
+.tab-item.active {
+    display: block;
+}
+
+.testimonial {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Row styling for the footer */
+.footer-row {
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    align-items: first baseline; /* Centers items vertically */
+    flex-wrap: wrap;
+    width: 100%; /* Ensures rows take up full container width */
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    gap: 200px; 
+}
+
+.evening-timing {
+    margin-left: 77px; /* Adjust the value as needed for the desired left spacing */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    margin: 10px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.footer-section p, 
+.footer-section ul,
+.footer-section a {
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* Quick Links Styling */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section a {
+    color: #ffde59; /* Highlight color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: block;
+    flex-direction: column; /* Arrange social icons in a column */
+    align-items: center; /* Center the icons horizontally */
+}
+
+.social-icons-inner {
+    display: flex;
+    flex-direction: row; /* Change to row for horizontal layout */
+    justify-content: flex-start; /* Center the icons horizontally */
+    gap: 10px; /* Spacing between icons */
+}
+
+.social-icon {
+    font-size: 1.5em; /* Icon size */
+    color: #ffde59; /* Icon color */
+    background-color: #555;
+    width: 40px; /* Set equal width and height */
+    height: 40px;
+    display: flex; /* Flexbox for the icon */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    border-radius: 50%; /* Ensures a perfect circle */
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none; /* Removes underline */
+}
+
+.social-icon:hover {
+    background-color: #ffde59;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Footer copyright */
+.footer-copyright {
+    font-size: 0.8em;
+    color: #ccc;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+#testimonials {
+    padding: 40px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.review-frame {
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}

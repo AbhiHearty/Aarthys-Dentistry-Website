@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aarthy's Dentistry</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #testimonials {
+        padding: 40px;
+        background: #f7f7f7;
+        text-align: center;
+      }
+
+      #testimonials h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .review {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .review p {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Aarthy's Dentistry</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="#services">Services</a>
+              <ul class="dropdown">
+                <li><a href="fillings.html">Fillings</a></li>
+                <li><a href="braces.html">Braces</a></li>
+                <li><a href="rct.html">About Us</a></li>
+              </ul>
+            </li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="overlay"></div>
+        <div class="content">
+          <h2>Kids Dentistry in Kolathur</h2>
+          <p>
+            Your teeth deserve the best! At Aarthy's Dentistry, we specialize in
+            expert treatments that focus on saving and preserving your teeth for
+            a healthy, beautiful smile that lasts a lifetime.
+          </p>
+          <a href="#contact" class="cta-button">Book an Appointment</a>
+        </div>
+      </section>
+
+      <section id="services">
+        <h2>Our Services</h2>
+        <div class="tabs">
+          <div class="tab" onclick="openService(event, 'aboutUs')">
+            <img src="icons/ic_about_us.png" alt="About Us Icon" />
+            <!-- Replace with actual icon URL -->
+            <h3>Root Canal Treatment</h3>
+            <p>Learn about our commitment to dental health.</p>
+          </div>
+          <div class="tab" onclick="openService(event, 'fillings')">
+            <img src="icons/ic_tooth_fillings.png" alt="Fillings Icon" />
+            <!-- Replace with actual icon URL -->
+            <h3>Fillings</h3>
+            <p>Quality fillings to restore your smile.</p>
+          </div>
+          <div class="tab" onclick="openService(event, 'braces')">
+            <img src="icons/ic_dental_braces.png" alt="Braces Icon" />
+            <!-- Replace with actual icon URL -->
+            <h3>Braces</h3>
+            <p>Straighten your teeth for a perfect smile.</p>
+          </div>
+        </div>
+        <div class="tab-content">
+          <div id="aboutUs" class="tab-item active">
+            <p>About us content goes here.</p>
+          </div>
+          <div id="fillings" class="tab-item">
+            <p>Information about fillings goes here.</p>
+          </div>
+          <div id="braces" class="tab-item">
+            <p>Details about braces services go here.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials">
+        <h2>What Our Patients Say</h2>
+        <div id="reviews"></div>
+      </section>
+
+      <section id="map">
+        <h2>Find Us Here</h2>
+        <div class="map-frame">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.6205747685553!2d80.21211699999999!3d13.123206299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526548335128e3%3A0xcb9195fe8497e633!2sAarthy%E2%80%99s%20Dentistry!5e0!3m2!1sen!2sin!4v1730613918076!5m2!1sen!2sin"
+                width="100%"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+    </main>
+
+    <footer id="contact">
+      <div class="footer-container">
+          <!-- First Row -->
+          <div class="footer-row">
+              <!-- Contact Section -->
+              <div class="footer-section contact">
+                  <h3>Contact</h3>
+                  <p>Address: 1/1, R.K.R Nagar, 1st Main Rd, Poompuhar Nagar, Chennai, Tamil Nadu 600099</p>
+                  <p>Phone: +91 8939 299 288</p>
+                  <p>Email: <a href="mailto:info@aarthysdentistry.in">info@aarthysdentistry.in</a></p>
+              </div>
+  
+              <!-- Quick Links Section -->
+              <div class="footer-section quick-links">
+                  <h3>Quick Links</h3>
+                  <ul>
+                      <li><a href="#services">Services</a></li>
+                      <li><a href="#testimonials">Testimonials</a></li>
+                      <li><a href="#map">Find Us</a></li>
+                      <li><a href="#contact">Contact Us</a></li>
+                  </ul>
+              </div>
+          </div>
+  
+          <!-- Second Row -->
+          <div class="footer-row">
+              <!-- Timings Section -->
+              <div class="footer-section timings">
+                  <h3>Timings</h3>
+                  <p>Mon - Sat : Morning : 9:30 AM - 12:30 PM</p>
+                  <p class="evening-timing">Evening : 5:30 PM - 09:00 PM</p>
+                  <p>Sun: On Appointment</p>
+              </div>
+  
+              <!-- Follow Us Section -->
+              <div class="footer-section social-icons">
+                <h3>Follow Us</h3>
+                <div class="social-icons-inner">
+                    <a href="https://www.facebook.com/profile.php?id=61565575555432" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/aarthys_dentistry/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+          </div>
+      </div>
+      <p class="footer-copyright">&copy; 2024 Aarthy's Dentistry. All rights reserved.</p>
+  </footer>
+  
+  
+
+    <script>
+      function openService(evt, serviceName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-item");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(serviceName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      document
+        .getElementById("services-link")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default anchor behavior
+          const dropdown = document.getElementById("dropdown");
+          dropdown.style.display =
+            dropdown.style.display === "block" ? "none" : "block"; // Toggle dropdown
+        });
+
+      // Optional: Close the dropdown when clicking outside of it
+      window.addEventListener("click", function (event) {
+        if (!event.target.matches("#services-link")) {
+          const dropdown = document.getElementById("dropdown");
+          if (dropdown.style.display === "block") {
+            dropdown.style.display = "none";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
