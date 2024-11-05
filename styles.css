@@ -53,6 +53,20 @@ header nav ul li a {
     background-position: center; /* Center the image */
 }
 
+.about-hero {
+    position: relative; /* Make the section relative */
+    height: 70vh; /* Full screen height */
+    overflow: hidden; /* Hide overflow */
+    display: flex; /* Use flexbox for centering content */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    background-image: url('images/aboutus.webp'); /* Use your background image */
+    background-size: cover; /* Ensure the background covers the entire section */
+    background-position: top; /* Center the image */
+}
+
 .overlay {
     position: absolute; /* Position it absolutely */
     top: 0;
@@ -342,22 +356,23 @@ footer {
     overflow: hidden;
 }
 
-.about-image {
-    display: block; /* Makes the image a block element */
-    margin: 0 auto; /* Centers the image horizontally */
-    max-width: 100%; /* Ensures the image is responsive */
-    height: auto; /* Maintains aspect ratio */
-}
 
-main {
+main,#about-main {
     text-align: center; /* Centers text and inline elements like images */
     margin: 20px; /* Optional: adds some space around the main section */
 }
-main p, main ul {
+#about-main p, main ul {
     text-align: left; /* Keeps paragraph text left-aligned */
-    color: #000000;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
-main h3{
+#about-main h2{
     margin-top: 40px;
+}
+
+#p-bottom {
+    padding-bottom: 40px; /* Adjust the value as needed */
 }
