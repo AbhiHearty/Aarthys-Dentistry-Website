@@ -38,6 +38,31 @@ header nav ul li a {
     text-decoration: none;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pagination button.active {
+    background-color: #555;
+}
+
+.pagination button:hover {
+    background-color: #666;
+}
+
+
 
 .hero {
     position: relative; /* Make the section relative */

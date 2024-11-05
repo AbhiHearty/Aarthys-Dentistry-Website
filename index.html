@@ -52,8 +52,8 @@
           <ul>
             <li><a href="aboutus.html">About Us</a></li>
             <li>
-              <a href="#services">Services</a>
-              <ul class="dropdown">
+              <a href="#services" id="services-link">Services</a>
+              <ul class="dropdown" id="dropdown">
                 <li><a href="fillings.html">Fillings</a></li>
                 <li><a href="braces.html">Braces</a></li>
                 <li><a href="rct.html">RCT</a></li>
@@ -120,8 +120,11 @@
 
       <section id="testimonials">
         <h2>What Our Patients Say</h2>
-        <div id="reviews"></div>
-      </section>
+        <div id="reviews-container"></div>
+        <div id="pagination" class="pagination"></div>
+    </section>
+    
+    
 
       <section id="map">
         <h2>Find Us Here</h2>
@@ -260,6 +263,78 @@
           }
         }
       });
+
+      // Static list of reviews
+const reviews = [
+    { text: "Briefly explained about the tooth care. Excellent service.", name: "LeelaBai." },
+    { text: "I had a great experience at Aarthy's Dentistry. Dr.Aarthy expertly performed my tooth extraction treatment, making sure I was comfortable throughout the process, and it was completely pain-free.Doctor answered all my questions and concerns with a warm smile. Grateful for your outstanding support and hospitality 🤗😊", name: "Chiran Jeevi." },
+    { text: "Doctor listens carefully the problem. She is also polite and fast in resolving issue. Her expertise service in dental filling and cleaning is extremely Commendable.the best place to visit for your any dental problems . Affordable price range.", name: "Shivani Deepak." },
+    { text: "I had an exceptional experience at this dental clinic. From the moment I walked in, the welcoming and calm atmosphere instantly made me feel comfortable. The reception staff were friendly and efficient, and I didn’t have to wait long for my appointment. The doctor was not only knowledgeable but also incredibly kind. After my initial check-up, I was pleasantly surprised to receive a follow-up call from the doctor to check on how I was doing. It's rare to find such personal care, and it really made me feel like they genuinely care about their patients. What stood out the most was how thoroughly the doctor explained every step of the treatment. They took the time to answer all my questions and made sure I understood the procedures and possible outcomes. It really put me at ease knowing I was in good hands, and that level of transparency is something I truly value. The clinic was clean, well-organized, and had a calm, professional vibe. It was clear that hygiene and patient comfort were top priorities. Overall, my experience was outstanding, and I wouldn’t hesitate to recommend this clinic to anyone looking for quality dental care with a personal touch.", name: "PREETHI NIKITA." },
+    { text: "I have never been to a dentist before and my first experience with aarthy's dentistry was just wow...best diagnosis and friendly doctor with hi-tech treatment...best place to visit for a happy smile ..", name: "Gayathri Saravanan." },
+    { text: "Excellent", name: "Saravanan Kalaiarasi." },
+    { text: "Thnku so much doctor ur service s so good nd now I'm able to eat properly thnku for ur wonderful service 😊😊😊😊😊", name: "Loga Nathanv" },
+    { text: "I had an excellent experience at Aarthy’s Dentistry in Poombuhar Nagar, Kolathur, with Dr. Aarthy Abhilash.I went in for dentures, and this is the best clinic for denture work. The clinic is clean and welcoming, and Dr. Aarthy Abhilash’s expertise and attention to detail made the process smooth and comfortable.The Doctor is friendly and professional, ensuring a pleasant experience from start to finish.I highly recommend Aarthy’s Dentistry for anyone needing denture work or other dental care!😊", name: "Raja Sekaranan" },
+    { text: "I Had An Exceptional Experience At Aarthy's Dentistry, poombuhar Nagar ,Kolathur. From The Moment I Walked In, The Staff Was Warm And Welcoming. The Clinic Was Clean And Modern, Creating A Comfortable Environment. Dr.Aarthy AbhilashWas Incredibly Professional And Thorough In Explaining The Procedures. They Made Sure I Was Comfortable Throughout The Entire Process. Dr.Aarthy Abhilash Was Gentle And Meticulous, Ensuring a Pain-Free Cleaning. I Appreciated The Follow-Up Call To Check On My Recovery. Overall, Exceeded My Expectations, And I Highly Recommend Their Services To Anyone In Need Of Dental Care.", name: "HEMAPRIYADARSHINI U" },
+    { text: "They were well treating the patient...", name: "Tejash Hari. palani" },
+    { text: "The clinic has a pleasant Ambience and I felt comfortable.Dr Aarthy explained the problem clearly and thoroughly inspected my teeth.excellent service and great attention to detail. Friendly staff.", name: "Biswantha Rao S" },
+    { text: "Visited clinic for scaling. Dr. Aarthy is so professional and explained the process and maintenance after process clearly. Worth visiting the clinic for all Dental problems.", name: "Ashwini Pawar" },
+    { text: "Very good attempt.", name: "Shanthi R" },
+    { text: "Highly recommended.Good hospitality.Clearly explained about dental issues and treatment plan.Thanks to Aarthy's Dentistry Keep up.", name: "Mahi Jadhav" },
+    { text: "The clinic provides excellent care. The staff is friendly, and Dr. Aarthy is highly skilled. The clinic is clean and welcoming. I felt comfortable and well-treated. Highly recommend!", name: "Sanjay" },
+    { text: "Went for tooth pain, done excellent treatment explained well about the issue, very caring and post treatment follow up actions are just amazing....", name: "Moorthy Kesavan" },
+    { text: "Amazing dentist, very caring and the staff is great. I recommend anyone to go there.", name: "Omprakash Selvam" },
+];
+
+// Variables for pagination
+const reviewsPerPage = 3;
+let currentPage = 1;
+
+// Function to render reviews based on the current page
+function renderReviews(page) {
+    const reviewsContainer = document.getElementById("reviews-container");
+    reviewsContainer.innerHTML = ""; // Clear previous reviews
+
+    // Calculate start and end index
+    const start = (page - 1) * reviewsPerPage;
+    const end = start + reviewsPerPage;
+    const reviewsToDisplay = reviews.slice(start, end);
+
+    // Add reviews to container
+    reviewsToDisplay.forEach(review => {
+        const reviewElement = document.createElement("div");
+        reviewElement.classList.add("review");
+        reviewElement.innerHTML = `
+            <p class="testimonial-text">"${review.text}"</p>
+            <p class="patient-name">— ${review.name}</p>
+        `;
+        reviewsContainer.appendChild(reviewElement);
+    });
+
+    renderPagination();
+}
+
+// Function to render pagination buttons
+function renderPagination() {
+    const paginationContainer = document.getElementById("pagination");
+    paginationContainer.innerHTML = ""; // Clear previous buttons
+
+    const totalPages = Math.ceil(reviews.length / reviewsPerPage);
+
+    for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement("button");
+        button.textContent = i;
+        button.classList.toggle("active", i === currentPage);
+        button.addEventListener("click", () => {
+            currentPage = i;
+            renderReviews(currentPage);
+        });
+        paginationContainer.appendChild(button);
+    }
+}
+
+// Initial load
+document.addEventListener("DOMContentLoaded", () => renderReviews(currentPage));
+
     </script>
   </body>
 </html>

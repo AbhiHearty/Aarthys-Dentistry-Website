@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RCT - Aarthy's Dentistry</title>
+    <title>Root Canal Treatment - Aarthy's Dentistry</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -13,11 +13,19 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* Inline Montserrat font for title only */
+      h1,
+      .page-title {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 200;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <h1>Aarthy's Dentistry</h1>
-      <nav>
+      <h1 class="page-title">Aarthy's Dentistry</h1>
+      <nav aria-label="Primary Navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="aboutus.html">About Us</a></li>
@@ -34,27 +42,98 @@
       </nav>
     </header>
 
-    <main>
-      <h2>About Aarthy's Dentistry</h2>
+    <main id="about-main">
+      <section class="about-hero"></section>
+      <h2>Root Canal Treatment at Aarthys Dentistry</h2>
       <p>
-        Welcome to Aarthy's Dentistry! We are committed to providing
-        high-quality dental care in a friendly and comfortable environment. Our
-        experienced team is here to take care of your dental needs.
+        At Aarthys Dentistry, we specialize in Root Canal Treatment (RCT) to save
+        damaged or infected teeth, relieving pain and restoring dental health.
+        Our aim is to provide effective treatments that preserve your natural
+        smile.
+      </p>
+
+      <h2>What is Root Canal Treatment?</h2>
+      <p>
+        Root Canal Treatment is a dental procedure used to treat infection or
+        damage to the pulp (the innermost part) of a tooth. It involves removing
+        the infected pulp, cleaning and disinfecting the interior of the tooth,
+        and sealing it to prevent further infection.
+      </p>
+
+      <h2>When is RCT Needed?</h2>
+      <ul>
+        <li>
+          <strong>Severe Toothache:</strong> Persistent pain in the tooth may
+          indicate pulp damage.
+        </li>
+        <li>
+          <strong>Infection or Abscess:</strong> Presence of an abscess or
+          swelling around the tooth.
+        </li>
+        <li>
+          <strong>Trauma:</strong> Injury to a tooth that may have caused pulp
+          damage.
+        </li>
+        <li>
+          <strong>Deep Decay:</strong> Extensive decay that has reached the pulp
+          area.
+        </li>
+      </ul>
+
+      <h2>The RCT Process</h2>
+      <ul>
+        <li>
+          <strong>Initial Consultation:</strong> We evaluate the tooth and take
+          necessary X-rays to determine the extent of damage.
+        </li>
+        <li>
+          <strong>Local Anesthesia:</strong> The area around the tooth is numbed
+          for your comfort during the procedure.
+        </li>
+        <li>
+          <strong>Pulp Removal:</strong> The infected pulp is carefully removed
+          to clean the interior of the tooth.
+        </li>
+        <li>
+          <strong>Cleaning and Shaping:</strong> The canal is cleaned,
+          disinfected, and shaped for filling.
+        </li>
+        <li>
+          <strong>Sealing the Tooth:</strong> The cleaned canal is filled and
+          sealed to prevent future infections.
+        </li>
+        <li>
+          <strong>Follow-Up:</strong> A follow-up visit may be required to place
+          a crown for further protection.
+        </li>
+      </ul>
+
+      <h2>Post-Treatment Care</h2>
+      <p>
+        After RCT, it’s important to maintain good oral hygiene, avoid hard
+        foods for a few days, and follow any specific care instructions given
+        by our team to ensure healing and long-term success.
+      </p>
+
+      <h2>Book Your Appointment Today!</h2>
+      <p id="p-bottom">
+        Don’t let tooth pain disrupt your life. Contact Aarthys Dentistry today
+        to schedule your consultation for Root Canal Treatment and get back to
+        a healthy, pain-free smile.
       </p>
     </main>
 
     <footer id="contact">
       <div class="footer-container">
-        <!-- First Row -->
+        <!-- Contact Section -->
         <div class="footer-row">
-          <!-- Contact Section -->
           <div class="footer-section contact">
             <h3>Contact</h3>
             <p>
               Address: 1/1, R.K.R Nagar, 1st Main Rd, Poompuhar Nagar, Chennai,
               Tamil Nadu 600099
             </p>
-            <p>Phone: +91 8939 299 288</p>
+            <p>Phone: <a href="tel:+918939299288">+91 8939 299 288</a></p>
             <p>
               Email:
               <a href="mailto:info@aarthysdentistry.in"
@@ -75,9 +154,8 @@
           </div>
         </div>
 
-        <!-- Second Row -->
+        <!-- Timings and Social Media Section -->
         <div class="footer-row">
-          <!-- Timings Section -->
           <div class="footer-section timings">
             <h3>Timings</h3>
             <p>Mon - Fri: 9:00 AM - 7:00 PM</p>
@@ -85,7 +163,7 @@
             <p>Sun: Closed</p>
           </div>
 
-          <!-- Follow Us Section -->
+          <!-- Social Icons Section -->
           <div class="footer-section social-icons">
             <h3>Follow Us</h3>
             <div class="social-icons-inner">
@@ -93,18 +171,28 @@
                 href="https://www.facebook.com/profile.php?id=61565575555432"
                 target="_blank"
                 class="social-icon"
+                aria-label="Facebook"
                 ><i class="fab fa-facebook-f"></i
               ></a>
-              <a href="https://twitter.com" target="_blank" class="social-icon"
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                class="social-icon"
+                aria-label="Twitter"
                 ><i class="fab fa-twitter"></i
               ></a>
               <a
                 href="https://www.instagram.com/aarthys_dentistry/"
                 target="_blank"
                 class="social-icon"
+                aria-label="Instagram"
                 ><i class="fab fa-instagram"></i
               ></a>
-              <a href="https://linkedin.com" target="_blank" class="social-icon"
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                class="social-icon"
+                aria-label="LinkedIn"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
             </div>
