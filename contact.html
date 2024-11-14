@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+    <header>
+        <h1 class="page-title">Aarthy's Dentistry</h1>
+        <nav aria-label="Primary Navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li>
+              <a href="#services">Services</a>
+              <ul class="dropdown">
+                <li><a href="fillings.html">Fillings</a></li>
+                <li><a href="braces.html">Braces</a></li>
+                <li><a href="rct.html">RCT</a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+
+<!-- Main Section -->
+<section class="main-section">
+  <div class="content">
+    <h1 id="h1-contact">How can we help?</h1>
+    <p>We are here for you, around the clock, every day.</p>
+    <p>Feel free to email, chat, or call us. Find all the details below.</p>
+    <button class="scroll-button" onclick="scrollToSection()">Ask a question ↓</button>
+  </div>
+  <div class="image">
+    <img src="images/aboutus.webp" alt="Contact Team">
+  </div>
+</section>
+
+<!-- Additional Section for Scroll Target -->
+<section id="contact-details">
+    <div id="contact-details">
+        <div class="contact-info">
+            <div class="info-tile">
+                <i class="fas fa-phone"></i>
+                <h3>Call us: +91 89 39 288 299</h3>
+                <p>All days.</p>
+            </div>
+            <div class="info-tile">
+                <i class="fas fa-envelope"></i>
+                <h3>info@aarthysdentistry.in</h3>
+                <p>Response within 24 hours.</p>
+            </div>
+            <a href="https://wa.me/918939299288" target="_blank" class="whatsapp-link">
+              <div class="info-tile">
+                  <i class="fas fa-comment"></i>
+                  <h3>Ask a question via chat</h3>
+                  <p>On weekdays from 08:30 - 17:00</p>
+              </div>
+          </a>
+            
+        </div>
+    </div>
+</section>
+
+<!-- New contact form section -->
+<section id="contact-form">
+    <h2>Send a message</h2>
+    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="images/aboutus.webp" alt="Bart Boonen" style="border-radius: 50%; width: 60px; height: 60px; margin-right: 15px;">
+        <p>“We are here for you. Fill in the form and we will get back to you as soon as possible.”<br><strong>Bart Boonen • Co-founder CloudNation</strong></p>
+    </div>
+    <form action="your_form_processing_script" method="POST">
+        <label for="message">What can we help you with?</label>
+        <textarea id="message" name="message" required placeholder="Your message*" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+        
+        <div style="display: flex; gap: 10px;">
+            <input type="text" name="first_name" required placeholder="First name*" style="flex: 1; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            <input type="text" name="last_name" required placeholder="Last name*" style="flex: 1; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+        </div>
+        
+        <div style="display: flex; gap: 10px; margin-top: 15px;">
+            <input type="email" name="email" required placeholder="Email*" style="flex: 1; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            <input type="tel" name="phone" placeholder="Phone number" style="flex: 1; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+        </div>
+        
+        <div style="margin-top: 15px;">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <label for="privacy">I agree to the <a href="privacy_statement_url" target="_blank">privacy statement</a>. *</label>
+        </div>
+        
+        <p style="font-size: 12px; color: #666; margin-top: 10px;">By submitting this form, you authorize CloudNation to process your personal data in order to provide you with the requested content. Please refer to the privacy policy for additional information.</p>
+        
+        <button type="submit" style="background-color: #00aaff; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; margin-top: 20px; cursor: pointer;">SUBMIT</button>
+    </form>
+</section>
+<footer id="contact">
+    <div class="footer-container">
+      <!-- First Row -->
+      <div class="footer-row">
+        <!-- Contact Section -->
+        <div class="footer-section contact">
+          <h3>Contact</h3>
+          <p>
+            Address: 1/1, R.K.R Nagar, 1st Main Rd, Poompuhar Nagar, Chennai,
+            Tamil Nadu 600099
+          </p>
+          <p>Phone: +91 8939 299 288</p>
+          <p>
+            Email:
+            <a href="mailto:info@aarthysdentistry.in"
+              >info@aarthysdentistry.in</a
+            >
+          </p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-section quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Find Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+      </div>
+
+      <!-- Second Row -->
+      <div class="footer-row">
+        <!-- Timings Section -->
+        <div class="footer-section timings">
+          <h3>Timings</h3>
+          <p>Mon - Sat : Morning : 9:30 AM - 12:30 PM</p>
+          <p class="evening-timing">Evening : 5:30 PM - 09:00 PM</p>
+          <p>Sun: On Appointment</p>
+        </div>
+
+        <!-- Follow Us Section -->
+        <div class="footer-section social-icons">
+          <h3>Follow Us</h3>
+          <div class="social-icons-inner">
+            <a
+              href="https://www.facebook.com/profile.php?id=61565575555432"
+              target="_blank"
+              class="social-icon"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/aarthys_dentistry/"
+              target="_blank"
+              class="social-icon"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="footer-copyright">
+      &copy; 2024 Aarthy's Dentistry. All rights reserved.
+    </p>
+  </footer>
+
+
+<script>
+  function scrollToSection() {
+    document.getElementById('contact-details').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function scrollToBottom(){
+    document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
+
+  }
+</script>
+
+</body>
+</html>

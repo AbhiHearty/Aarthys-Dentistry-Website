@@ -92,6 +92,50 @@ header nav ul li a {
     background-position: top; /* Center the image */
 }
 
+.filling-hero {
+    position: relative; /* Make the section relative */
+    height: 70vh; /* Full screen height */
+    overflow: hidden; /* Hide overflow */
+    display: flex; /* Use flexbox for centering content */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    background-image: url('images/dental_filling.jpeg'); /* Use your background image */
+    background-size: cover; /* Ensure the background covers the entire section */
+    background-position: top; /* Center the image */
+}
+
+.braces-hero {
+    position: relative; /* Make the section relative */
+    height: 70vh; /* Full screen height */
+    overflow: hidden; /* Hide overflow */
+    display: flex; /* Use flexbox for centering content */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    background-image: url('images/dental_braces.jpeg'); /* Use your background image */
+    background-size: cover; /* Ensure the background covers the entire section */
+    background-position: top; /* Center the image */
+}
+
+.rct-hero {
+    position: relative; /* Make the section relative */
+    height: 70vh; /* Full screen height */
+    overflow: hidden; /* Hide overflow */
+    display: flex; /* Use flexbox for centering content */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    background-image: url('images/Rct.webp'); /* Use your background image */
+    background-size: cover; /* Ensure the background covers the entire section */
+    background-position: top; /* Center the image */
+}
+
+
+
 .overlay {
     position: absolute; /* Position it absolutely */
     top: 0;
@@ -400,4 +444,272 @@ main,#about-main {
 
 #p-bottom {
     padding-bottom: 40px; /* Adjust the value as needed */
+}
+
+
+
+  
+  .main-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  
+  /* .content {
+    max-width: 50%;
+  }
+   */
+  #h1-contact{
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .scroll-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .scroll-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  #contact-details {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+
+  /* General Contact Section Styles */
+#contact-details {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  #contact-details h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #007bff;
+  }
+  
+  /* Contact Info Grid */
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 0px;
+  }
+  
+  .info-tile {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;  /* Space between tiles in the grid */
+  }
+  
+  .info-tile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .info-tile h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .info-tile p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .info-tile i {
+    font-size: 30px;
+    color: #007bff;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  /* Team Members Grid */
+  .team-members {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .team-tile {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-height: 300px; /* Minimum height for the tile */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;  /* Space between tiles in the grid */
+  }
+  
+  .team-tile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .team-tile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .team-tile h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .team-tile p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .contact-info, .team-members {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .info-tile, .team-tile {
+      width: 80%;
+    }
+  }
+
+
+  /* General Styling */
+ #contact-form {
+    background-color: #f9f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Contact Details Section */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.info-tile {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.info-tile h3 {
+    margin: 10px 0;
+}
+
+/* Contact Form Section */
+#contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-image {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.input-textarea, .input-field {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.privacy-checkbox {
+    margin-top: 15px;
+}
+
+.privacy-text {
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: #00aaff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+/* Make the entire tile clickable */
+.whatsapp-link {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Inherit the text color */
+    display: block; /* Makes the link fill the entire div */
+}
+
+.info-tile {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.info-tile:hover {
+    background-color: #e0f7fa; /* Change background color on hover */
+    cursor: pointer;
 }
